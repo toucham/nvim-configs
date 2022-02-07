@@ -1,0 +1,15 @@
+{
+// Require .prettierrc
+"prettier.requireConfig": true,
+"coc.preferences.jumpCommand": "vsplit",
+// Run prettier (and others)
+"coc.preferences.formatOnSaveFiletypes": [
+  "css",
+  "markdown",
+  "Markdown",
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact"
+]
+}
