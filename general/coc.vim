@@ -44,6 +44,28 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+function! SplitIfNotOpen(...)
+    let fname = a:1
+    let call = ''
+    if a:0 == 2
+	let fname = a:2
+	let call = a:1
+    endif
+    let bufnum=bufnr(expand(fname))
+    let winnum=bufwinnr(bufnum)
+    if winnum != -1
+	" Jump to existing split
+	exe winnum . "wincmd w"
+    else
+	" Make new split as usual
+	exe "vsplit " . fname
+    endif
+    " Execute the cursor movement command
+    exe call
+endfunction
+
+command! -nargs=+ CocSplitIfNotOpen :call SplitIfNotOpen(<f-args>)
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 

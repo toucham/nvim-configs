@@ -1,9 +1,10 @@
 {
 // Require .prettierrc
 "prettier.requireConfig": true,
-"coc.preferences.jumpCommand": "vsplit",
+"coc.preferences.jumpCommand": "CocSplitIfNotOpen",
 // Run prettier (and others)
 "coc.preferences.formatOnSaveFiletypes": [
+  "python",
   "css",
   "markdown",
   "Markdown",
@@ -11,5 +12,12 @@
   "javascriptreact",
   "typescript",
   "typescriptreact"
-]
+],
+"python.venvFolders": [
+  "envs",
+  ".pyenv",
+  ".direnv"
+],
+"python.jediEnabled": false,
+"python.linting.pylintEnabled": true
 }
