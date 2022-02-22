@@ -1,23 +1,26 @@
 {
-// Require .prettierrc
-"prettier.requireConfig": true,
-"coc.preferences.jumpCommand": "CocSplitIfNotOpen",
-// Run prettier (and others)
-"coc.preferences.formatOnSaveFiletypes": [
-  "python",
-  "css",
-  "markdown",
-  "Markdown",
-  "javascript",
-  "javascriptreact",
-  "typescript",
-  "typescriptreact"
-],
-"python.venvFolders": [
-  "envs",
-  ".pyenv",
-  ".direnv"
-],
-"python.jediEnabled": false,
-"python.linting.pylintEnabled": true
+
+  // Require .prettierrc
+  "prettier.requireConfig": true,
+  "coc.preferences.jumpCommand": "CocSplitIfNotOpen",
+  // Run prettier (and others)
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "css",
+    "markdown",
+    "Markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "python.venvFolders": [
+    "envs",
+    ".pyenv",
+    ".direnv"
+  ],
+  "python.jediEnabled": false,
+  "python.linting.pylintEnabled": true,
+  "tsserver.log": "normal",
+  "tsserver.maxTsServerMemory": 2048
 }
